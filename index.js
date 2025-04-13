@@ -1,7 +1,7 @@
 const express = require('express')
 require('dotenv').config()
 const app = express()
-const port = process.env.port || 3000
+const port = process.env.PORT || 3000;
 const mongodb = require("./configuration/config")
 const {checkSchema} = require('express-validator')
 const cors = require("cors")
