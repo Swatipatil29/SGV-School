@@ -1,14 +1,12 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 
-const configureDb = async () =>  {
- const db = await mongoose.connect('mongodb+srv://avinashkempi:Rcbcsk@mongodb123@schoolapp.uhmjiaw.mongodb.net/?retryWrites=true&w=majority&appName=SchoolApp')
+const configureDb = async () => {
+  try {
+    await mongoose.connect('mongodb+srv://avinashkempi:RcbCsk-mongo123@schoolapp.uhmjiaw.mongodb.net/sgv-school?retryWrites=true&w=majority&appName=SchoolApp');
+    console.log('Connected to db');
+  } catch (e) {
+    console.log('Error while connecting to db:', e.message);
+  }
+};
 
- try{
-    console.log('Connected to db')
- }
- catch(e) {
-    console.log("error while connecting to db")
- }
-}
-
-module.exports = configureDb
+module.exports = configureDb;
