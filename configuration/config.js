@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 const configureDb = async () =>  {
- const db = await mongoose.connect('mongodb://127.0.0.1:27017/school-app')
+ const db = await mongoose.connect('mongodb+srv://avinashkempi:Rcbcsk@mongodb123@schoolapp.uhmjiaw.mongodb.net/?retryWrites=true&w=majority&appName=SchoolApp')
 
  try{
     console.log('Connected to db')
